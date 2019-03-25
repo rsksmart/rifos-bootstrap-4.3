@@ -5,61 +5,226 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <!-- Customized Override -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>Bootstrap Starter</title>
+
+    <style>
+	    .header {
+		    background: #172b36;
+		    margin-bottom: 50px;
+		}
+		.content-section {
+			padding-bottom: 50px;
+			margin-bottom: 50px;
+			border-bottom: 1px solid #eee;
+		}
+	</style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+	<div class="header">
+		<div class="container">
+			<div class="float-left">
+				<img src="images/logo.svg" width="100" />
+			</div>
+			<div class="float-right" style="color: #FFF;padding: 20px;">
+				Bootstrap 4.3 Starter
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
 
-    <button type="button" class="btn btn-primary">Primary</button>
+	<div class="content">
+		<div class="container">
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+			<!---------------------- TYPOGRAPHY -->
+			<section id="typography" class="content-section">
+				<h2 class="text-primary">TYPOGRAPHY</h2>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+				<h3 class="mt-4"><small class="text-muted">Titles</small></h3>
+				<h1>h1. Montserrat Bold 32px</h1>
+				<h2>h2. Montserrat Light 24px</h2>
+				<h3>h3. Montserrat Regular 22px</h3>
+
+				<h3 class="mt-4"><small class="text-muted">Sub Titles</small></h3>
+				<h4>h4. Montserrat Medium 18px</h4>
+				<h5>h5. Montserrat SemiBold 16px</h5>
+				<h6>h6. Montserrat Bold 12px</h6>
+
+				<h3 class="mt-4"><small class="text-muted">Text / Content</small></h3>
+				<p>Default Text: Montserrat Medium 16px</p>
+				<label>label: Roboto Condensed Bold 16px</label><br />
+				<data>data: Roboto Condensed Regular 16px</data>
+
+				<h3 class="mt-4"><small class="text-muted">Colors</small></h3>
+				<span class="text-primary">.text-primary</span><br />
+				<span class="text-secondary">.text-secondary</span><br />
+				<span class="text-success">.text-success</span><br />
+				<span class="text-danger">.text-danger</span><br />
+				<span class="text-warning">.text-warning</span><br />
+				<span class="text-info">.text-info</span>
+
+			</section>
+
+			<!---------------------- MESSAGING -->
+			<section id="messaging" class="content-section">
+				<h2 class="text-primary">MESSAGING</h2>
+
+				<h3 class="mt-4"><small class="text-muted">Alerts</small></h3>
+
+				<div class="alert alert-primary" role="alert">
+					A simple primary alert—check it out!
+				</div>
+				<div class="alert alert-secondary" role="alert">
+					A simple secondary alert—check it out!
+				</div>
+				<div class="alert alert-success" role="alert">
+					A simple success alert—check it out!
+				</div>
+				<div class="alert alert-danger" role="alert">
+					A simple danger alert—check it out!
+				</div>
+				<div class="alert alert-warning" role="alert">
+					A simple warning alert—check it out!
+				</div>
+				<div class="alert alert-info" role="alert">
+					A simple info alert—check it out!
+				</div>
+				<div class="alert alert-light" role="alert">
+					A simple light alert—check it out!
+				</div>
+			</section>
+
+			<!---------------------- BREADCRUMBS -->
+			<section id="breadcrumbs" class="content-section">
+				<h2 class="text-primary">BREADCRUMBS</h2>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item active" aria-current="page">Home</li>
+					</ol>
+				</nav>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Library</li>
+					</ol>
+				</nav>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item"><a href="#">Library</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Data</li>
+					</ol>
+				</nav>
+			</section>
+
+			<!---------------------- LISTS -->
+			<section id="lists" class="content-section">
+				<h2 class="text-primary">LISTS</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<h3 class="mt-4"><small class="text-muted">Ordered List</small></h3>
+						<ol>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ol>
+									<li>Phasellus iaculis neque</li>
+									<li>Purus sodales ultricies</li>
+									<li>Vestibulum laoreet porttitor sem</li>
+									<li>Ac tristique libero volutpat at</li>
+								</ol>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ol>
+					</div>
+					<div class="col-md-6">
+						<h3 class="mt-4"><small class="text-muted">Unordered List</small></h3>
+						<ul>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ul>
+									<li>Phasellus iaculis neque</li>
+									<li>Purus sodales ultricies</li>
+									<li>Vestibulum laoreet porttitor sem</li>
+									<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!---------------------- PAGINATION -->
+			<section id="lists" class="content-section">
+				<h2 class="text-primary mb-4">PAGINATION</h2>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+					</ul>
+				</nav>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item active"><a class="page-link" href="#">3</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<section id="modals">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+				  Launch demo modal
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        ...
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		</div><!-- .container -->
+	</div><!-- .content -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

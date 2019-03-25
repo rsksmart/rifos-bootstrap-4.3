@@ -1,14 +1,114 @@
-$blue:    #149DD9;
-$green:   #53C676;
+$red: 			#d93528;
+$blue:    		#149DD9;
+$green:   		#53C676;
+$yellow:		#D9A114;
+$cyan: 			#7E97A3;
+$secondary:     $green;
+$success: 		#14D944;
+$dark-blue: 	#172b36;
+
+$font-family-sans-serif:      "Montserrat', sans-serif", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Montserrat', sans-serif;
+	color: #323031;
+}
 
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+/*############################################################# TYPOGRAPHY */
+
+h1 {
+	font-size: 32px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+}
+h3 {
+	font-size: 22px;
+	font-weight: 400;
+}
+h4 {
+	font-size: 18px;
+	font-weight: 500;
+}
+h5 {
+	font-size: 16px;
+	font-weight: 600;
+}
+h6 {
+	font-size: 12px;
+	font-weight: 700;
+}
+label,
+.label {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+}
+data,
+.data {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
+/*############################################################# MESSAGING */
+.alert-primary {
+	background-color: $blue;
+	border-color: darken( $blue, 3% );
+	color: #FFF;
+}
+.alert-secondary {
+	background-color: $green;
+	border-color: darken( $green, 3% );
+	color: #FFF;
+}
+.alert-success {
+	background-color: $success;
+	border-color: darken( $success, 3% );
+	color: #FFF;
+}
+.alert-danger {
+	background-color: $danger;
+	border-color: darken( $danger, 3% );
+	color: #FFF;
+}
+.alert-warning {
+	background-color: $warning;
+	border-color: darken( $warning, 3% );
+	color: #FFF;
+}
+.alert-info {
+	background-color: $cyan;
+	border-color: darken( $cyan, 3% );
+	color: #FFF;
+}
+.alert-light {
+	background-color: $gray-100;
+	border-color: darken( $gray-100, 3% );
+	color: #7E97A3;
+}
+
+/*############################################################# BREADCRUMBS */
+.breadcrumb {
+	background-color: transparent;
+}
+
+
+/*############################################################# PAGINATION */
+.page-link {
+	color: $dark-blue;
+	border: none;
+
+	&:hover {
+		background: transparent;
+		color: $blue;
+	}
+}
+.page-item.active .page-link {
+	background: transparent;
+	color: $blue;
+}
