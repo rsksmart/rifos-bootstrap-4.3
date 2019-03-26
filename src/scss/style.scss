@@ -1,11 +1,17 @@
-$red: 			#d93528;
-$blue:    		#149DD9;
-$green:   		#53C676;
-$yellow:		#D9A114;
-$cyan: 			#7E97A3;
-$secondary:     $green;
-$success: 		#14D944;
-$dark-blue: 	#172b36;
+/* Variable Overrides / New Additions */
+$red: 					#d93528;
+$blue:    				#149DD9;
+$blue-alt:				#0e76a5;
+$green:   				#53C676;
+$yellow:				#D9A114;
+$cyan: 					#7E97A3;
+$secondary:     		$green;
+$success: 				#14D944;
+$dark-main: 			#172b36;
+$dark-alt: 				#333132;
+$link-hover-color:		$blue-alt;
+$link-color-alt:		$green;
+$link-hover-color-alt:	darken($link-color-alt, 15%);
 
 $font-family-sans-serif:      "Montserrat', sans-serif", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
@@ -55,6 +61,34 @@ data,
 	font-weight: 400;
 }
 
+/*############################################################# COLORS */
+.text-default {
+	color: $dark;
+}
+.link-alt {
+
+	color: $link-color-alt;
+
+	&:hover {
+		color: $link-hover-color-alt;
+	}
+
+	&:focus {
+		color: $link-hover-color-alt;
+	}
+
+}
+.bg-primary-alt {
+	background-color: $blue-alt;
+}
+.bg-dark {
+	background-color: $dark-main !important;
+}
+.bg-dark-alt {
+	background-color: $dark-alt !important;
+}
+
+
 /*############################################################# MESSAGING */
 .alert-primary {
 	background-color: $blue;
@@ -100,7 +134,7 @@ data,
 
 /*############################################################# PAGINATION */
 .page-link {
-	color: $dark-blue;
+	color: $dark-main;
 	border: none;
 
 	&:hover {
