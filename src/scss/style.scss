@@ -13,19 +13,30 @@ $link-hover-color:		$blue-alt;
 $link-color-alt:		$green;
 $link-hover-color-alt:	darken($link-color-alt, 15%);
 
-$font-family-sans-serif:      "Montserrat', sans-serif", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+/* Buttons */
+$btn-padding-y: 10px;
+$btn-padding-x: 30px;
+$btn-font-size: 14px;
 
+$btn-padding-y-lg: 10px;
+$btn-padding-x-lg: 30px;
+$btn-font-size-lg: 16px;
+
+/* Fonts */
+$font-family-sans-serif: 	"Montserrat", sans-serif, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-alt: 			"Roboto Condensed", sans-serif;
+
+/* Bootstrap v4.3 CSS */
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+/*############################################################# GLOBAL */
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Montserrat', sans-serif;
 	color: #323031;
 }
 
 /*############################################################# TYPOGRAPHY */
-
 h1 {
 	font-size: 32px;
 	font-weight: 700;
@@ -52,12 +63,12 @@ h6 {
 }
 label,
 .label {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: $font-family-alt;
 	font-weight: 700;
 }
 data,
 .data {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: $font-family-alt;
 	font-weight: 400;
 }
 
@@ -131,7 +142,6 @@ data,
 	background-color: transparent;
 }
 
-
 /*############################################################# PAGINATION */
 .page-link {
 	color: $dark-main;
@@ -139,10 +149,195 @@ data,
 
 	&:hover {
 		background: transparent;
-		color: $blue;
+		color: $green;
+
+		i {
+			color: $dark-main;
+		}
+	}
+
+	> i {
+		color: $green;
 	}
 }
 .page-item.active .page-link {
 	background: transparent;
-	color: $blue;
+	color: $green;
+}
+
+/*############################################################# TABS */
+.nav-tabs {
+	margin-bottom: 1rem;
+
+	.nav-item.show .nav-link,
+	.nav-link.active {
+		color: $green;
+	}
+}
+
+/*############################################################# BUTTONS */
+.btn-default {
+	background-color: $dark;
+	color: #FFF;
+
+	&:hover {
+		background-color: darken( $dark, 10% );
+		color: #FFF;
+	}
+
+	&:focus {
+		background-color: darken( $dark, 10% );
+		color: #FFF;
+	}
+}
+.btn {
+
+	box-shadow: none !important;
+
+	.focus,
+	&:focus,
+	&:hover,
+	&:active {
+		box-shadow: none !important;
+	}
+
+}
+.btn-secondary {
+	color: #FFF;
+}
+.btn-outline-secondary:hover {
+	color: #FFF;
+}
+.btn-outline-default {
+	color: $dark;
+    border-color: $dark;
+
+    &:hover {
+	    background-color: $dark;
+		color: #FFF;
+    }
+}
+
+/*############################################################# POPUPS */
+.popover-header,
+.popover-body {
+	font-size: 14px;
+	color: $gray-600;
+}
+
+/*############################################################# MODALS */
+.modal {
+
+	.modal-dialog {
+		margin-top: 3rem;
+	}
+
+	.modal-header {
+
+		position: relative;
+		border-top: 5px solid $dark-main;
+		border-bottom: none;
+		padding: 1.5rem 1.5rem .5rem 1.5rem;
+
+		.close {
+		    width: 40px;
+		    height: 40px;
+		    display: block;
+		    position: absolute;
+		    color: #fff;
+		    border-radius: 50%;
+		    background-color: #172b36;
+		    top: -5px;
+		    right: 0;
+		    padding: 0;
+		    opacity: 1 !important;
+		    font-weight: 400;
+		}
+
+		.modal-title {
+			display: block;
+			width: 100%;
+			padding-bottom: 5px;
+			color: $blue;
+			font-weight: 300;
+			border-bottom: 2px dotted $gray-300;
+		}
+	}
+
+	.modal-body {
+		padding: .75rem 1.5rem;
+		color: $gray-600;
+	}
+
+	.modal-footer {
+		padding: .75rem 1.5rem;
+		border-top: none;
+		justify-content: flex-start;
+	}
+}
+
+/*############################################################# FORMS */
+.form-group {
+
+	position: relative;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		border-width: 0 0 1px 0;
+		border-bottom: 1px dashed $gray-300;
+		border-radius: 0;
+		padding-left: 0;
+	}
+
+	.form-control {
+
+		font-size: 14px;
+
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+
+	select.dropdown {
+		position: relative;
+		-webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+	}
+
+	label.wrap {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		display: block;
+		font-family: $font-family-sans-serif;
+		font-size: 16px;
+	}
+
+	label.wrap:after {
+		content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: $blue;
+        position: absolute;
+        right: 10px;
+		top: 6px;
+        z-index: 1;
+        display: block;
+        pointer-events: none;
+	}
+
+}
+.form-check {
+
+	label.form-check-label {
+		font-weight: 400;
+		font-family: $font-family-sans-serif;
+		font-size: 14px;
+		color: $gray-700;
+	}
+
 }

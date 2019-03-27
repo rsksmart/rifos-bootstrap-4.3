@@ -4,9 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 	<!-- Custom Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto+Condensed:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- Customized Override -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -90,7 +92,7 @@
 				<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
 				<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
 				<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-				<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+				<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
 
 			</section>
 
@@ -191,12 +193,12 @@
 						<li class="page-item active"><a class="page-link" href="#">1</a></li>
 						<li class="page-item"><a class="page-link" href="#">2</a></li>
 						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+						<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
 					</ul>
 				</nav>
 				<nav aria-label="Page navigation example">
 					<ul class="pagination">
-						<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+						<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
 						<li class="page-item"><a class="page-link" href="#">1</a></li>
 						<li class="page-item"><a class="page-link" href="#">2</a></li>
 						<li class="page-item active"><a class="page-link" href="#">3</a></li>
@@ -235,26 +237,90 @@
 			<section id="tabs" class="content-section">
 				<h2 class="text-primary mb-4">TABS</h2>
 
-				<ul class="nav nav-tabs">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Active</a>
+						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
 					</li>
 				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+					</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+					</div>
+					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+						<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+					</div>
+				</div>
 			</section>
 
-			<section id="modals">
-				<!-- Button trigger modal -->
+			<!---------------------- BUTTONS -->
+			<section id="buttons" class="content-section">
+				<h2 class="text-primary mb-4">BUTTONS</h2>
+
+				<h3 class="mt-4"><small class="text-muted">Solid</small></h3>
+				<button type="button" class="btn btn-primary">Primary</button>
+				<button type="button" class="btn btn-secondary">Secondary</button>
+				<button type="button" class="btn btn-default">Default</button>
+
+				<h3 class="mt-4"><small class="text-muted">Reversed</small></h3>
+				<button type="button" class="btn btn-outline-primary">Primary</button>
+				<button type="button" class="btn btn-outline-secondary">Secondary</button>
+				<button type="button" class="btn btn-outline-default">Default</button>
+			</section>
+
+			<!---------------------- POPUPS -->
+			<section id="popups" class="content-section">
+				<h2 class="text-primary mb-4">POPUPS</h2>
+
+				<h3 class="mt-4"><small class="text-muted">Directional</small></h3>
+				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+					Popover on top
+				</button>
+
+				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+					Popover on right
+				</button>
+
+				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+				sagittis lacus vel augue laoreet rutrum faucibus.">
+					Popover on bottom
+				</button>
+
+				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+					Popover on left
+				</button>
+
+				<h3 class="mt-4"><small class="text-muted">With Title</small></h3>
+				<button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+				<script type="text/javascript">
+					jQuery( document ).ready(function() {
+						jQuery(function () {
+							jQuery('[data-toggle="popover"]').popover()
+						});
+					});
+				</script>
+			</section>
+
+			<!---------------------- MODALS -->
+			<section id="modals" class="content-section">
+				<h2 class="text-primary mb-4">MODALS</h2>
+
+				<!-- Button triggers -->
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-				  Launch demo modal
+				  Standard Modal
+				</button>
+
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+				  Large Modal
 				</button>
 
 				<!-- Modal -->
@@ -262,13 +328,13 @@
 				  <div class="modal-dialog" role="document">
 				    <div class="modal-content">
 				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				        <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				          <span aria-hidden="true">&times;</span>
 				        </button>
 				      </div>
 				      <div class="modal-body">
-				        ...
+				      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -277,16 +343,129 @@
 				    </div>
 				  </div>
 				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+				  <div class="modal-dialog modal-lg" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h3 class="modal-title" id="exampleModalLabel2">Modal title</h3>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
 			</section>
 
+			<!---------------------- FORMS -->
+			<section id="forms" class="content-section">
+				<h2 class="text-primary mb-4">FORMS</h2>
 
+				<form>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Text Input" required>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" required>
+							</div>
+
+							<label for="exampleCheck1">Standard Checkbox</label>
+							<div class="form-group form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+							    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+							 </div>
+
+							 <div>
+								 <label>Inline Checkbox</label><br />
+								 <div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+									<label class="form-check-label" for="inlineCheckbox1">1</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+									<label class="form-check-label" for="inlineCheckbox2">2</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+									<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+								</div>
+							</div><br />
+
+							<label for="exampleCheck1">Standard Radio</label>
+							<div class="form-group form-check">
+								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+								<label class="form-check-label" for="exampleRadios1">Default radio</label>
+							</div>
+
+							<div>
+								<label>Inline Radio</label><br />
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									<label class="form-check-label" for="inlineRadio1">1</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									<label class="form-check-label" for="inlineRadio2">2</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+									<label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="exampleFormControlSelect1" class="col-form-label-sm">Dropdown Label (small)</label>
+								<label class="wrap">
+									<select class="form-control dropdown" id="exampleFormControlSelect1">
+										<option disabled selected>Select an option ...</option>
+										<option>Option one</option>
+										<option>Option two</option>
+										<option>Option three</option>
+										<option>Option four</option>
+										<option>Option five</option>
+									</select>
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlSelect2" class="col-form-label">Multi Select Label (regular)</label>
+								<select multiple class="form-control" id="exampleFormControlSelect2">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlSelect2" class="col-form-label-lg">Textarea Label (large)</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+
+							<button class="btn btn-primary" type="submit">Submit form</button>
+						</div>
+					</div>
+				</form>
+
+			</section>
 
 		</div><!-- .container -->
 	</div><!-- .content -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
