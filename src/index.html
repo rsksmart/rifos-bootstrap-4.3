@@ -16,454 +16,605 @@
     <title>Bootstrap Starter</title>
 
     <style>
-	    .header {
-		    background: #172b36;
-		    margin-bottom: 50px;
-		}
+	    body {
+		    position: relative;
+			overflow-y: auto;
+	    }
 		.content-section {
 			padding-bottom: 50px;
 			margin-bottom: 50px;
 			border-bottom: 1px solid #eee;
 		}
+		#scrollspy-nav {
+			position: fixed;
+		}
+		@media(max-width:767px) {
+			#scrollspy-nav {
+				position: relative;
+			}
+		}
 	</style>
   </head>
-  <body>
-	<div class="header">
-		<div class="container">
-			<div class="float-left">
-				<img src="images/logo.svg" width="100" />
-			</div>
-			<div class="float-right" style="color: #FFF;padding: 20px;">
-				Bootstrap 4.3 Starter
-			</div>
-			<div class="clearfix"></div>
+  <body data-spy="scroll" data-target="#scrollspy-nav" data-offset="0" id="top">
+
+	<div class="header bg-dark">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg pt-3">
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.svg" width="100" />
+				</a>
+				<button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+					<form class="form-inline row pl-3">
+						<input class="form-control mr-sm-2 ml-3 col-6" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-primary my-2 my-sm-0 ml-1" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+
 		</div>
 	</div>
 
 	<div class="content">
-		<div class="container">
+		<div class="container-fluid">
 
-			<!---------------------- TYPOGRAPHY -->
-			<section id="typography" class="content-section">
-				<h2 class="text-primary">TYPOGRAPHY</h2>
+			<div class="row">
+				<div class="col-md-3">
 
-				<h3 class="mt-4"><small class="text-muted">Titles</small></h3>
-				<h1>h1. Montserrat Bold 32px</h1>
-				<h2>h2. Montserrat Light 24px</h2>
-				<h3>h3. Montserrat Regular 22px</h3>
+					<ul class="nav nav-rif flex-column mt-2" id="scrollspy-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#top">Top</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#typography">Typography</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#colors">Colors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#messaging">Messaging</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#breadcrumbs">Breadcrumbs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#lists">Lists</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#pagination">Pagination</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#progress-bars">Progress Bars</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tabs">Tabs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#buttons">Buttons</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#popups">Popups</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#modals">Modals</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#forms">Forms</a>
+						</li>
+					</ul>
+				</div>
 
-				<h3 class="mt-4"><small class="text-muted">Sub Titles</small></h3>
-				<h4>h4. Montserrat Medium 18px</h4>
-				<h5>h5. Montserrat SemiBold 16px</h5>
-				<h6>h6. Montserrat Bold 12px</h6>
+				<div class="col-md-9">
 
-				<h3 class="mt-4"><small class="text-muted">Text / Content</small></h3>
-				<p>Default Text: Montserrat Medium 16px</p>
-				<label>label: Roboto Condensed Bold 16px</label><br />
-				<data>data: Roboto Condensed Regular 16px</data>
-
-
-			</section>
-
-			<!---------------------- COLORS -->
-			<section id="colors" class="content-section">
-				<h2 class="text-primary">COLORS</h2>
-
-				<h3 class="mt-4"><small class="text-muted">Text</small></h3>
-				<span class="text-default">.text-default</span><br />
-				<span class="text-primary">.text-primary</span><br />
-				<span class="text-secondary">.text-secondary</span><br />
-				<span class="text-info">.text-info</span><br />
-				<span class="text-success">.text-success</span><br />
-				<span class="text-danger">.text-danger</span><br />
-				<span class="text-warning">.text-warning</span><br />
-
-				<h3 class="mt-4"><small class="text-muted">Links</small></h3>
-				<a href="#">Default Link</a><br />
-				<a href="#" class="link-alt">Secondary Link</a>
-
-				<h3 class="mt-4"><small class="text-muted">Backgrounds</small></h3>
-				<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
-				<div class="p-3 mb-2 bg-primary-alt text-white">.bg-primary-alt</div>
-				<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
-				<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-				<div class="p-3 mb-2 bg-dark-alt text-white">.bg-dark-alt</div>
-				<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
-				<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
-				<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
-				<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-				<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
-
-			</section>
-
-			<!---------------------- MESSAGING -->
-			<section id="messaging" class="content-section">
-				<h2 class="text-primary">MESSAGING</h2>
-
-				<h3 class="mt-4"><small class="text-muted">Alerts</small></h3>
-
-				<div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
-				<div class="alert alert-secondary" role="alert">A simple secondary alert—check it out!</div>
-				<div class="alert alert-info" role="alert">A simple info alert—check it out!</div>
-				<div class="alert alert-light" role="alert">A simple light alert—check it out!</div>
-				<div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
-				<div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
-				<div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>
-
-			</section>
-
-			<!---------------------- BREADCRUMBS -->
-			<section id="breadcrumbs" class="content-section">
-				<h2 class="text-primary">BREADCRUMBS</h2>
-
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active" aria-current="page">Home</li>
-					</ol>
-				</nav>
-
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Library</li>
-					</ol>
-				</nav>
-
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Library</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Data</li>
-					</ol>
-				</nav>
-			</section>
-
-			<!---------------------- LISTS -->
-			<section id="lists" class="content-section">
-				<h2 class="text-primary">LISTS</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<h3 class="mt-4"><small class="text-muted">Ordered List</small></h3>
-						<ol>
-							<li>Lorem ipsum dolor sit amet</li>
-							<li>Consectetur adipiscing elit</li>
-							<li>Integer molestie lorem at massa</li>
-							<li>Facilisis in pretium nisl aliquet</li>
-							<li>Nulla volutpat aliquam velit
-								<ol>
-									<li>Phasellus iaculis neque</li>
-									<li>Purus sodales ultricies</li>
-									<li>Vestibulum laoreet porttitor sem</li>
-									<li>Ac tristique libero volutpat at</li>
-								</ol>
-							</li>
-							<li>Faucibus porta lacus fringilla vel</li>
-							<li>Aenean sit amet erat nunc</li>
-							<li>Eget porttitor lorem</li>
-						</ol>
+					<div class="mb-5 mt-5">
+						<h1>RIF Bootstrap Style Guide</h1>
+						<p>Below you will find a number of Bootstrap 4.3 components styled to match the RIF brand guidelines.  All of the sections on this page are using the default Bootstrap classes.  Any additional styles that are related specifically to this demo page are defined in the head of the source code.  A number of these components also contain variations when it comes to sizes, behavior and additional styles.  Please follow the <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" target="_blank">Bootstrap 4.3 documentation</a> to make any adjustments as you see fit.</p>
 					</div>
-					<div class="col-md-6">
-						<h3 class="mt-4"><small class="text-muted">Unordered List</small></h3>
-						<ul>
-							<li>Lorem ipsum dolor sit amet</li>
-							<li>Consectetur adipiscing elit</li>
-							<li>Integer molestie lorem at massa</li>
-							<li>Facilisis in pretium nisl aliquet</li>
-							<li>Nulla volutpat aliquam velit
+
+					<!---------------------- TYPOGRAPHY -->
+					<section id="typography" class="content-section">
+						<h2 class="text-primary">TYPOGRAPHY</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Titles</small></h3>
+						<h1>h1. Montserrat Bold 32px</h1>
+						<h2>h2. Montserrat Light 24px</h2>
+						<h3>h3. Montserrat Regular 22px</h3>
+
+						<h3 class="mt-4"><small class="text-muted">Sub Titles</small></h3>
+						<h4>h4. Montserrat Medium 18px</h4>
+						<h5>h5. Montserrat SemiBold 16px</h5>
+						<h6>h6. Montserrat Bold 12px</h6>
+
+						<h3 class="mt-4"><small class="text-muted">Text / Content</small></h3>
+						<p>Default Text: Montserrat Medium 16px</p>
+						<label>label: Roboto Condensed Bold 16px</label><br />
+						<data>data: Roboto Condensed Regular 16px</data>
+
+
+					</section>
+
+					<!---------------------- COLORS -->
+					<section id="colors" class="content-section">
+						<h2 class="text-primary">COLORS</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Text</small></h3>
+						<span class="text-default">.text-default</span><br />
+						<span class="text-primary">.text-primary</span><br />
+						<span class="text-secondary">.text-secondary</span><br />
+						<span class="text-info">.text-info</span><br />
+						<span class="text-success">.text-success</span><br />
+						<span class="text-danger">.text-danger</span><br />
+						<span class="text-warning">.text-warning</span><br />
+
+						<h3 class="mt-4"><small class="text-muted">Links</small></h3>
+						<a href="#">Default Link</a><br />
+						<a href="#" class="link-alt">Secondary Link</a>
+
+						<h3 class="mt-4"><small class="text-muted">Backgrounds</small></h3>
+						<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+						<div class="p-3 mb-2 bg-primary-alt text-white">.bg-primary-alt</div>
+						<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+						<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+						<div class="p-3 mb-2 bg-dark-alt text-white">.bg-dark-alt</div>
+						<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+						<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+						<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+						<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+						<div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
+
+					</section>
+
+					<!---------------------- MESSAGING -->
+					<section id="messaging" class="content-section">
+						<h2 class="text-primary">MESSAGING</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Alerts</small></h3>
+
+						<div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+						<div class="alert alert-secondary" role="alert">A simple secondary alert—check it out!</div>
+						<div class="alert alert-info" role="alert">A simple info alert—check it out!</div>
+						<div class="alert alert-light" role="alert">A simple light alert—check it out!</div>
+						<div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+						<div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+						<div class="alert alert-warning" role="alert">A simple warning alert—check it out!</div>
+
+					</section>
+
+					<!---------------------- BREADCRUMBS -->
+					<section id="breadcrumbs" class="content-section">
+						<h2 class="text-primary">BREADCRUMBS</h2>
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active" aria-current="page">Home</li>
+							</ol>
+						</nav>
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Library</li>
+							</ol>
+						</nav>
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item"><a href="#">Library</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Data</li>
+							</ol>
+						</nav>
+					</section>
+
+					<!---------------------- LISTS -->
+					<section id="lists" class="content-section">
+						<h2 class="text-primary">LISTS</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<h3 class="mt-4"><small class="text-muted">Ordered List</small></h3>
+								<ol>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>Consectetur adipiscing elit</li>
+									<li>Integer molestie lorem at massa</li>
+									<li>Facilisis in pretium nisl aliquet</li>
+									<li>Nulla volutpat aliquam velit
+										<ol>
+											<li>Phasellus iaculis neque</li>
+											<li>Purus sodales ultricies</li>
+											<li>Vestibulum laoreet porttitor sem</li>
+											<li>Ac tristique libero volutpat at</li>
+										</ol>
+									</li>
+									<li>Faucibus porta lacus fringilla vel</li>
+									<li>Aenean sit amet erat nunc</li>
+									<li>Eget porttitor lorem</li>
+								</ol>
+							</div>
+							<div class="col-md-6">
+								<h3 class="mt-4"><small class="text-muted">Unordered List</small></h3>
 								<ul>
-									<li>Phasellus iaculis neque</li>
-									<li>Purus sodales ultricies</li>
-									<li>Vestibulum laoreet porttitor sem</li>
-									<li>Ac tristique libero volutpat at</li>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>Consectetur adipiscing elit</li>
+									<li>Integer molestie lorem at massa</li>
+									<li>Facilisis in pretium nisl aliquet</li>
+									<li>Nulla volutpat aliquam velit
+										<ul>
+											<li>Phasellus iaculis neque</li>
+											<li>Purus sodales ultricies</li>
+											<li>Vestibulum laoreet porttitor sem</li>
+											<li>Ac tristique libero volutpat at</li>
+										</ul>
+									</li>
+									<li>Faucibus porta lacus fringilla vel</li>
+									<li>Aenean sit amet erat nunc</li>
+									<li>Eget porttitor lorem</li>
 								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!---------------------- PAGINATION -->
+					<section id="pagination" class="content-section">
+						<h2 class="text-primary mb-4">PAGINATION</h2>
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+							</ul>
+						</nav>
+						<nav aria-label="Page navigation example">
+							<ul class="pagination">
+								<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item active"><a class="page-link" href="#">3</a></li>
+							</ul>
+						</nav>
+					</section>
+
+					<!---------------------- PROGRESS BARS -->
+					<section id="progress-bars" class="content-section">
+						<h2 class="text-primary mb-4">PROGRESS BARS</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Solid</small></h3>
+						<div class="progress mb-2">
+							<div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<div class="progress mb-2">
+							<div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<div class="progress mb-2">
+							<div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+
+						<h3 class="mt-4"><small class="text-muted">Striped</small></h3>
+						<div class="progress mb-2">
+							<div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<div class="progress mb-2">
+							<div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<div class="progress mb-2">
+							<div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</section>
+
+					<!---------------------- TABS -->
+					<section id="tabs" class="content-section">
+						<h2 class="text-primary mb-4">TABS</h2>
+
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
 							</li>
-							<li>Faucibus porta lacus fringilla vel</li>
-							<li>Aenean sit amet erat nunc</li>
-							<li>Eget porttitor lorem</li>
+							<li class="nav-item">
+								<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+								<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+							</div>
+							<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+								<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+							</div>
+							<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+								<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+							</div>
+						</div>
+					</section>
+
+					<!---------------------- BUTTONS -->
+					<section id="buttons" class="content-section">
+						<h2 class="text-primary mb-4">BUTTONS</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Solid</small></h3>
+						<button type="button" class="btn btn-primary mb-1">Primary</button>
+						<button type="button" class="btn btn-secondary mb-1">Secondary</button>
+						<button type="button" class="btn btn-default mb-1">Default</button>
+
+						<h3 class="mt-4"><small class="text-muted">Reversed</small></h3>
+						<button type="button" class="btn btn-outline-primary mb-1">Primary</button>
+						<button type="button" class="btn btn-outline-secondary mb-1">Secondary</button>
+						<button type="button" class="btn btn-outline-default mb-1">Default</button>
+					</section>
+
+					<!---------------------- POPUPS -->
+					<section id="popups" class="content-section">
+						<h2 class="text-primary mb-4">POPUPS</h2>
+
+						<h3 class="mt-4"><small class="text-muted">Directional</small></h3>
+						<button type="button" class="btn btn-secondary mb-1" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover on top
+						</button>
+
+						<button type="button" class="btn btn-secondary mb-1" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover on right
+						</button>
+
+						<button type="button" class="btn btn-secondary mb-1" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+						sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover on bottom
+						</button>
+
+						<button type="button" class="btn btn-secondary mb-1" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+							Popover on left
+						</button>
+
+						<h3 class="mt-4"><small class="text-muted">With Title</small></h3>
+						<button type="button" class="btn btn-primary mb-1" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+						<script type="text/javascript">
+							jQuery( document ).ready(function() {
+								jQuery(function () {
+									jQuery('[data-toggle="popover"]').popover()
+								});
+							});
+						</script>
+					</section>
+
+					<!---------------------- MODALS -->
+					<section id="modals" class="content-section">
+						<h2 class="text-primary mb-4">MODALS</h2>
+
+						<!-- Button triggers -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						  Standard Modal
+						</button>
+
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+						  Large Modal
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+						  <div class="modal-dialog modal-lg" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h3 class="modal-title" id="exampleModalLabel2">Modal title</h3>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+					</section>
+
+					<!---------------------- FORMS -->
+					<section id="forms" class="content-section">
+						<h2 class="text-primary mb-4">FORMS</h2>
+
+						<form>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Text Input" required>
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" required>
+									</div>
+
+									<label for="exampleCheck1">Standard Checkbox</label>
+									<div class="form-group form-check">
+									    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+									    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+									 </div>
+
+									 <div>
+										 <label>Inline Checkbox</label><br />
+										 <div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+											<label class="form-check-label" for="inlineCheckbox1">1</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+											<label class="form-check-label" for="inlineCheckbox2">2</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+											<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+										</div>
+									</div><br />
+
+									<label for="exampleCheck1">Standard Radio</label>
+									<div class="form-group form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+										<label class="form-check-label" for="exampleRadios1">Default radio</label>
+									</div>
+
+									<div>
+										<label>Inline Radio</label><br />
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+											<label class="form-check-label" for="inlineRadio1">1</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+											<label class="form-check-label" for="inlineRadio2">2</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+											<label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="exampleFormControlSelect1" class="col-form-label-sm">Dropdown Label (small)</label>
+										<label class="wrap">
+											<select class="form-control dropdown" id="exampleFormControlSelect1">
+												<option disabled selected>Select an option ...</option>
+												<option>Option one</option>
+												<option>Option two</option>
+												<option>Option three</option>
+												<option>Option four</option>
+												<option>Option five</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-group">
+										<label for="exampleFormControlSelect2" class="col-form-label">Multi Select Label (regular)</label>
+										<select multiple class="form-control" id="exampleFormControlSelect2">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="exampleFormControlSelect2" class="col-form-label-lg">Textarea Label (large)</label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+									</div>
+
+									<button class="btn btn-primary" type="submit">Submit form</button>
+								</div>
+							</div>
+						</form>
+
+					</section>
+
+				</div><!-- .col-sm-9 -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+		<footer id="footer" class="bg-dark-alt pt-4 pb-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 mb-4">
+						<img class="logo" src="https://www.rifos.org/wp-content/themes/riflabs/dist/images/logo-footer.png" alt="RIF OS" width="150" class="mt-4">
+					</div>
+					<div class="col-sm-3 mb-4">
+						<h5 class="text-light">RIF</h5>
+						<ul class="nav flex-column">
+						  <li class="nav-item">
+						    <a class="active" href="#">Active</a>
+						  </li>
+						  <li class="nav-item">
+						    <a href="#">Link</a>
+						  </li>
+						  <li class="nav-item">
+						    <a href="#">Link</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="col-sm-3 mb-4">
+						<h5 class="text-light">RESOURCES</h5>
+						<ul class="nav flex-column">
+						  <li class="nav-item">
+						    <a class="active" href="#">Active</a>
+						  </li>
+						  <li class="nav-item">
+						    <a href="#">Link</a>
+						  </li>
+						  <li class="nav-item">
+						    <a href="#">Link</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="col-sm-3 mb-4">
+						<h5 class="text-light">COPYRIGHT</h5>
+						<p class="text-primary">&copy; 2019 RIF Labs Limited. <br />All Rights Reserved.</p>
+						<ul class="nav">
+							<li class="nav-item">
+							    <a class="nav-link h3" href="#"><i class="fab fa-facebook-square"></i></a>
+							 </li>
+							 <li class="nav-item">
+							    <a class="nav-link h3" href="#"><i class="fab fa-twitter-square"></i></a>
+							 </li>
+							 <li class="nav-item">
+							    <a class="nav-link h3" href="#"><i class="fab fa-linkedin"></i></a>
+							 </li>
 						</ul>
 					</div>
 				</div>
-			</section>
-
-			<!---------------------- PAGINATION -->
-			<section id="lists" class="content-section">
-				<h2 class="text-primary mb-4">PAGINATION</h2>
-				<nav aria-label="Page navigation example">
-					<ul class="pagination">
-						<li class="page-item active"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
-					</ul>
-				</nav>
-				<nav aria-label="Page navigation example">
-					<ul class="pagination">
-						<li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
-						<li class="page-item"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item active"><a class="page-link" href="#">3</a></li>
-					</ul>
-				</nav>
-			</section>
-
-			<!---------------------- PROGRESS BARS -->
-			<section id="progress-bars" class="content-section">
-				<h2 class="text-primary mb-4">PROGRESS BARS</h2>
-
-				<h3 class="mt-4"><small class="text-muted">Solid</small></h3>
-				<div class="progress mb-2">
-					<div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				<div class="progress mb-2">
-					<div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				<div class="progress mb-2">
-					<div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-
-				<h3 class="mt-4"><small class="text-muted">Striped</small></h3>
-				<div class="progress mb-2">
-					<div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				<div class="progress mb-2">
-					<div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-				<div class="progress mb-2">
-					<div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-				</div>
-			</section>
-
-			<!---------------------- TABS -->
-			<section id="tabs" class="content-section">
-				<h2 class="text-primary mb-4">TABS</h2>
-
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-					</li>
-				</ul>
-				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-					</div>
-					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-					</div>
-					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-						<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-					</div>
-				</div>
-			</section>
-
-			<!---------------------- BUTTONS -->
-			<section id="buttons" class="content-section">
-				<h2 class="text-primary mb-4">BUTTONS</h2>
-
-				<h3 class="mt-4"><small class="text-muted">Solid</small></h3>
-				<button type="button" class="btn btn-primary">Primary</button>
-				<button type="button" class="btn btn-secondary">Secondary</button>
-				<button type="button" class="btn btn-default">Default</button>
-
-				<h3 class="mt-4"><small class="text-muted">Reversed</small></h3>
-				<button type="button" class="btn btn-outline-primary">Primary</button>
-				<button type="button" class="btn btn-outline-secondary">Secondary</button>
-				<button type="button" class="btn btn-outline-default">Default</button>
-			</section>
-
-			<!---------------------- POPUPS -->
-			<section id="popups" class="content-section">
-				<h2 class="text-primary mb-4">POPUPS</h2>
-
-				<h3 class="mt-4"><small class="text-muted">Directional</small></h3>
-				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover on top
-				</button>
-
-				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover on right
-				</button>
-
-				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-				sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover on bottom
-				</button>
-
-				<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-					Popover on left
-				</button>
-
-				<h3 class="mt-4"><small class="text-muted">With Title</small></h3>
-				<button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-
-				<script type="text/javascript">
-					jQuery( document ).ready(function() {
-						jQuery(function () {
-							jQuery('[data-toggle="popover"]').popover()
-						});
-					});
-				</script>
-			</section>
-
-			<!---------------------- MODALS -->
-			<section id="modals" class="content-section">
-				<h2 class="text-primary mb-4">MODALS</h2>
-
-				<!-- Button triggers -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-				  Standard Modal
-				</button>
-
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-				  Large Modal
-				</button>
-
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary">Save changes</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h3 class="modal-title" id="exampleModalLabel2">Modal title</h3>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				      	Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary">Save changes</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-			</section>
-
-			<!---------------------- FORMS -->
-			<section id="forms" class="content-section">
-				<h2 class="text-primary mb-4">FORMS</h2>
-
-				<form>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Text Input" required>
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" required>
-							</div>
-
-							<label for="exampleCheck1">Standard Checkbox</label>
-							<div class="form-group form-check">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-							    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-							 </div>
-
-							 <div>
-								 <label>Inline Checkbox</label><br />
-								 <div class="form-check form-check-inline">
-									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-									<label class="form-check-label" for="inlineCheckbox1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-									<label class="form-check-label" for="inlineCheckbox2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-									<label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-								</div>
-							</div><br />
-
-							<label for="exampleCheck1">Standard Radio</label>
-							<div class="form-group form-check">
-								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-								<label class="form-check-label" for="exampleRadios1">Default radio</label>
-							</div>
-
-							<div>
-								<label>Inline Radio</label><br />
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-									<label class="form-check-label" for="inlineRadio1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-									<label class="form-check-label" for="inlineRadio2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-									<label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="exampleFormControlSelect1" class="col-form-label-sm">Dropdown Label (small)</label>
-								<label class="wrap">
-									<select class="form-control dropdown" id="exampleFormControlSelect1">
-										<option disabled selected>Select an option ...</option>
-										<option>Option one</option>
-										<option>Option two</option>
-										<option>Option three</option>
-										<option>Option four</option>
-										<option>Option five</option>
-									</select>
-								</label>
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlSelect2" class="col-form-label">Multi Select Label (regular)</label>
-								<select multiple class="form-control" id="exampleFormControlSelect2">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlSelect2" class="col-form-label-lg">Textarea Label (large)</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>
-
-							<button class="btn btn-primary" type="submit">Submit form</button>
-						</div>
-					</div>
-				</form>
-
-			</section>
-
-		</div><!-- .container -->
+			</div>
+		</footer>
 	</div><!-- .content -->
 
+	<script type="text/javascript">
+		jQuery(window).scroll(function() {
+		    var scroll = $(window).scrollTop();
+		    if (scroll >= 100) {
+		        jQuery(".nav-rif").css("top", "0");
+		    } else {
+			    jQuery(".nav-rif").css("top", "auto");
+		    }
+		});
+</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
