@@ -1,14 +1,15 @@
 # rifos.org-Bootstrap-4.3
 
-Then install dependencies:
+
+### Install dependencies:
 
 ```bash
 npm install
 ```
 
-The build files will be located in the `src` directory ready to be served by any HTTP server.
+Build files are located in the `src` directory ready to be served by any HTTP server.
 
-## Development
+### Development
 
 ```bash
 gulp watch
