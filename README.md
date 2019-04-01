@@ -1,4 +1,18 @@
 # rifos.org-Bootstrap-4.3
 
-- Run "npm install" from project root to setup project locally.
-- Run "gulp watch" to open project in a browser and monitor changes.
+Then install dependencies:
+
+```bash
+npm install
+```
+
+The build files will be located in the `src` directory ready to be served by any HTTP server.
+
+## Development
+
+```bash
+gulp watch
+```
+
+The site will open in the port 3000.
+
